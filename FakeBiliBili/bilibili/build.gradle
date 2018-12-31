@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.bilibili"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 120
+        versionName "1.2.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "arm64-v8a"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile project(':common')
+    compile project(':ijkplayer')
+    compile "com.google.dagger:dagger:$dagger_version"
+    compile("com.jakewharton:butterknife:$butterknife_version") {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'support-compat'
+    }
+    compile 'com.alibaba:fastjson:1.2.14'
+    compile 'org.jsoup:jsoup:1.10.2'
+    //弹幕烈焰使
+    compile 'com.github.ctiao:DanmakuFlameMaster:0.9.12'
+
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
+}

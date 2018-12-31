@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--colorPrimary对应ActionBar的颜色-->
+        <item name="colorPrimary">@color/theme_color_primary</item>
+        <!--colorPrimaryDark对应状态栏的颜色-->
+        <item name="colorPrimaryDark">@color/theme_color_primary</item>
+        <!--colorAccent 对应EditText编辑时、RadioButton选中、CheckBox等选中时的颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--ActionBarDrawerToggle设置颜色 -->
+        <item name="colorControlNormal">@android:color/white</item>
+        <!-- 底部导航栏的颜色 -->
+        <!--<item name="android:navigationBarColor" tools:targetApi="lollipop">@color/navigationBarColor</item>-->
+        <!--<item name="android:windowBackground">@color/windowBackground</item>-->
+    </style>
+
+    <!--<style name="AppTheme.SwipeBack">-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Common-->
+    <!--Don't use parent style-->
+    <style name="text_style_parent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--text-->
+    <style name="text_style_xlarge" parent="text_style_parent">
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+    </style>
+
+    <style name="text_style_large" parent="text_style_parent">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="text_style_normal" parent="text_style_parent">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="text_style_small" parent="text_style_parent">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="text_style_live_common" parent="text_style_parent">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="text_style_navigation" parent="text_style_normal">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">@dimen/margin_small</item>
+    </style>
+
+    <!--image-->
+    <style name="image_style_parent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>
